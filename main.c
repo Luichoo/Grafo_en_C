@@ -1,6 +1,6 @@
 /*
 Practica grafos
-
+ 
 Nombres:
 Luis Antonio Blanco Conde
 Alejandro Octavio Salas Comparán
