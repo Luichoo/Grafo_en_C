@@ -488,7 +488,7 @@ short int inserta_conex(C **inicio,int llave)//Funcion de insercion de conexione
     short int checa;
     int opc,peso;
     C *aux,*aux2;
-    N *nuevo,*nuevo2;
+    N *nuevo/*,*nuevo2*/;
     aux2 = NULL;
     aux = NULL;
     aux = busca_ciudad(*inicio,llave);
@@ -508,13 +508,13 @@ short int inserta_conex(C **inicio,int llave)//Funcion de insercion de conexione
                 checa = checa_conex(aux->lista,aux2);
                 if(checa == 0)
                  return -3;
-                 nuevo2=(N*)malloc(sizeof(N));
-                 if(!nuevo2)
-                 return -4;
+                // nuevo2=(N*)malloc(sizeof(N));
+               //  if(!nuevo2)
+               //  return -4;
                 nuevo=(N*)malloc(sizeof(N));
                  if(!nuevo)
                  return -4;
-                nuevo2->conex = aux;
+              //  nuevo2->conex = aux;
                 nuevo->conex = aux2;
                 printf("\n\tIngrese distancia en km entre %s y %s: ",aux->ciudad,aux2->ciudad);
                 fflush(stdin);
@@ -530,14 +530,14 @@ short int inserta_conex(C **inicio,int llave)//Funcion de insercion de conexione
                        printf("\n\tDato invalido, reingrese dato"); 
                     }                    
                 } while (opc <= 0);
-                nuevo2->distancia = opc;
+               // nuevo2->distancia = opc;
                 nuevo->distancia = opc;
                 nuevo->sig_dato = NULL;
-                nuevo2->sig_dato = NULL;
+              //  nuevo2->sig_dato = NULL;
                 checa = inserta_conex_final(&(aux)->lista,nuevo);
                 aux->cuantos = cuenta_datos(aux->lista,0);
-                checa = inserta_conex_final(&(aux2)->lista,nuevo2);
-                aux2->cuantos = cuenta_datos(aux2->lista,0);
+               // checa = inserta_conex_final(&(aux2)->lista,nuevo2);
+                //aux2->cuantos = cuenta_datos(aux2->lista,0);
                 return checa;
              }
              else
