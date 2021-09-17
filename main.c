@@ -186,7 +186,7 @@ if(scanf("%d",&opc))
     if(checa==1)
     {
         printf("\n\n|°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|");
-        printf("\n\tExito de impresion del camino");
+        printf("\n\tExito de impresion del camino!");
     }
     else if(checa == -1)
     {
