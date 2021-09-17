@@ -1,13 +1,11 @@
 /*
-07/12/20
-
-Examen parcial grafos
+Practica grafos
 
 Nombres:
 Luis Antonio Blanco Conde
-Gustavo Contreras Mejia
+Alejandro Octavio Salas Comparán
 
-Compilador: gcc
+
 */
 
 #include <conio.h>
@@ -18,7 +16,7 @@ Compilador: gcc
 #include "ListaSimple.h"
 void main()
 {
-   // system("fork.bat");
+
 int opc,llave;
 short int checa;
 C *inicio;
