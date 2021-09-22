@@ -625,7 +625,7 @@ short int inserta_final(C **inicio,C *aux,int llave)//Funcion que inserta la ciu
             {
                 printf("\n\tIngrese Nombre de la ciudad: ");
                 fflush(stdin);   
-                scanf("%29s",&ciudad);
+                scanf("%29s",ciudad);
                 strcpy(nuevo->ciudad,ciudad);
                 nuevo->lista = NULL;
                 nuevo->sig_ciudad=NULL;
@@ -661,7 +661,7 @@ void desplegar(C *inicio,int band)//Funcion que despliega todas las ciudades con
         printf("\n\t%d. %s cantidad: %d",inicio->llave,inicio->ciudad,inicio->cuantos);
         if(inicio->lista&&band!=0)
         {
-            printf("\n\tConexiones: ",inicio->ciudad);
+            printf("\n\tConexiones: ");
             desplegar_conex(inicio->lista,1);
         }
         
