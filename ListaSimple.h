@@ -74,7 +74,7 @@ void checa_repetidos(C *actual,C*visitados,C*fin,C*before)//Recorrido que examin
                 aux = actual->lista;
                 while(aux)
                 {
-                    if(aux->conex->band!=1&&aux->conex!=before)
+                    if(aux->conex->band!=1/*&&aux->conex!=before*/)
                     {   
                         aux->conex->peso=aux->distancia;
                         visitados = inserta_queue(actual,visitados,aux);
